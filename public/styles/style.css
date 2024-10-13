@@ -1,0 +1,12 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.input {
+  width: 300px;
+  border-radius: 3px;
+}
+

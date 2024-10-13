@@ -1,0 +1,9 @@
+<ul>
+  {{#each albums as |album|}}
+  <div class="cardArtist">
+    <li>{{album.name}}</li>
+    <a href="/tracks/{{album.id}}"><button type="submit">View Tracks</button></a>
+  </div>
+
+  {{/each}}
+</ul>

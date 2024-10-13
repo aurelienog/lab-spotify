@@ -1,0 +1,9 @@
+<ul>
+  {{#each tracks as |track|}}
+  <div class="cardArtist">
+    <li>{{track.name}}</li>
+    <audio controls src = "{{track.preview_url}}">
+  </div>
+
+  {{/each}}
+</ul>
