@@ -1,7 +1,10 @@
 <ul>
   {{#each artists as |artist|}}
-    <div class = "cardArtist">
+    <div class = "card">
       <li>{{artist.name}}</li>
+      <div>
+        <img src = "{{artist.images.1.url}}">
+      </div>
       <a href="/albums/{{artist.id}}"><button type="submit">View Albums</button></a> 
     </div>
     

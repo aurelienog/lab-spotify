@@ -12,7 +12,7 @@ module.exports.search = (req, res, next) => {
       res.render("artist-search-results", {
         artists : data.body.artists.items
     } )
-      //console.log('The received data from the API: ', data.body.artists);
+      //console.log('The received data from the API: ', data.body.artists.items[0].images[0].url);
       // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
@@ -24,9 +24,10 @@ module.exports.albums = (req, res, next) => {
     .getArtistAlbums(req.params.id)
     .then(data => {
       res.render("albums", {
-        albums : data.body.items
+        albums: data.body.items
+        
     } )
-
+    console.log('The received data from the API: ', data.body.items[0].images)
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
   
@@ -39,7 +40,7 @@ module.exports.tracks = (req, res, next) => {
       res.render("tracks", {
         tracks : data.body.items
     } )
-      console.log('The received data from the API: ', data.body.items);
+      //console.log('The received data from the API: ', data.body.items);
       // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
